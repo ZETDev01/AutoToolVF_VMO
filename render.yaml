@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: autotoolvf-vmo
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: VINFAST_WEB_HOST
+        value: 0.0.0.0
+      - key: VINFAST_ROBOT_HOST
+        value: 0.0.0.0
+      - key: VINFAST_ROBOT_PORT
+        value: 9000
+      - key: VINFAST_REALTIME_BASE_URL
+        value: wss://groot.vizone.ai/api/v2/s2s
+      - key: VINFAST_REALTIME_MODEL
+        value: vsf
+      - key: VINFAST_REALTIME_DEVICE_ID
+        value: robot_03072026_official_qcd
+      - key: VINFAST_REALTIME_MODALITIES
+        value: text
+      - key: VINFAST_REALTIME_RESPONSE_MODALITIES
+        value: text
+      - key: VINFAST_REALTIME_API_KEY_HEADER
+        value: apikey
+      - key: VINFAST_REALTIME_API_KEY
+        sync: false
+      - key: VINFAST_HMS_API_KEY
+        sync: false
