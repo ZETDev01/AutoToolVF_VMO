@@ -1,5 +1,4 @@
 openai[realtime]
-pyaudio
 numpy
 black
 isort

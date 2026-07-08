@@ -17,8 +17,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
+COPY requirements-audio.txt .
 RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+    && pip install -r requirements.txt \
+    && pip install -r requirements-audio.txt
 
 COPY . .
 RUN chmod +x docker-entrypoint.sh

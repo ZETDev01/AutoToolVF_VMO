@@ -2,11 +2,31 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/ask",
+      "dest": "/api/ask.py"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/health.py"
+    },
+    {
+      "src": "/robot/(wake|sleep)",
+      "dest": "/api/robot.py"
+    },
+    {
+      "src": "/mic/(status|start|stop)",
+      "dest": "/api/mic.py"
+    },
     {
       "src": "/web/(.*)",
       "dest": "/public/web/$1"
