@@ -1,0 +1,51 @@
+# Node artifact files
+node_modules/
+dist/
+
+# Python
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+env/
+env_py38/
+
+# Logs and runtime outputs
+*.log
+logs/
+runs/
+outputs/
+recordings/
+
+# Local HMS batch artifacts
+hms_input_*.csv
+hms_result_*.csv
+hms_result_*.xlsx
+
+# Package/build artifacts
+*.jar
+*.class
+target/
+*.app
+*.exe
+*.war
+
+# Unit test reports
+TEST*.xml
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Project-local/generated
+*.wuw
+.env
+tests/
+dev/
+backup*/
+.trivycache/
+.python-version
+.agents/
+.codex/
